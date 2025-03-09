@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Layout (Your Existing UI) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <!-- Title Bar -->
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#D97F76"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:elevation="4dp"
+            android:gravity="center_vertical">
+
+            <!-- Navigation Button -->
+            <ImageView
+                android:id="@+id/navButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_menu_24"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- App Logo & Name -->
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/baseline_menu_24" />
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="JeevanJyot"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <!-- Profile Icon -->
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_account_circle_24"
+                android:tint="@android:color/white"
+                />
+        </LinearLayout>
+
+        <!-- Content Area -->
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomBar"
+            android:layout_below="@id/titleBar"
+            android:background="@android:color/white" />
+
+        <!-- Bottom Bar -->
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#D97F76"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true">
+
+            <!-- Chatbot -->
+            <ImageView
+                android:id="@+id/chatbotButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_forum_24"
+                android:tint="@android:color/white"
+                android:layout_marginEnd="16dp"/>
+
+            <!-- Language Change -->
+            <ImageView
+                android:id="@+id/languageButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_language_24"
+                android:tint="@android:color/white"
+                android:layout_marginEnd="16dp"/>
+
+            <!-- Theme Change -->
+            <ImageView
+                android:id="@+id/themeButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_dark_mode_24"
+                android:tint="@android:color/white"
+                android:layout_marginEnd="16dp"/>
+
+            <!-- Additional Icon -->
+            <ImageView
+                android:id="@+id/extraButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_settings_24"
+                app:tint="@android:color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Navigation Drawer Menu -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_xml"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
