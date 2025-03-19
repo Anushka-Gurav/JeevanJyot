@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private FloatingActionButton fb, google, twit;
+
     private static final float ANIMATION_START_TRANSLATION = 300f;
     private static final int ANIMATION_DURATION = 1000;
 
@@ -88,9 +88,6 @@ public class LoginActivity extends AppCompatActivity {
         // Initialize UI components
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
-        fb = findViewById(R.id.fab_facebook);
-        google = findViewById(R.id.fab_google);
-        twit = findViewById(R.id.fab_twitter);
 
         // Set tab text colors
         tabLayout.setTabTextColors(
@@ -107,16 +104,6 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         // Floating Action Button Animations
-        FloatingActionButton[] buttons = {fb, google, twit};
-        for (FloatingActionButton button : buttons) {
-            button.setTranslationY(ANIMATION_START_TRANSLATION);
-            button.setAlpha(0f);
-            button.animate()
-                    .translationY(0)
-                    .alpha(1)
-                    .setDuration(ANIMATION_DURATION)
-                    .setStartDelay(400)
-                    .start();
-        }
+
     }
 }

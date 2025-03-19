@@ -137,18 +137,19 @@
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_bg"
                         android:gravity="center"
+                        android:id="@+id/chat"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:src="@drawable/baseline_calendar_month_24" />
+                            android:layout_height="57dp"
+                            android:src="@drawable/baseline_chat_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="My Calendar"
+                            android:text="ChatBot"
                             android:textColor="@color/lavendar"
                             android:textSize="16sp" />
                     </LinearLayout>

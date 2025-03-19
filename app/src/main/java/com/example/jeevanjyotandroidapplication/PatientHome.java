@@ -30,6 +30,26 @@ public class PatientHome extends DrawerBaseForPatient{
                 startActivity(it);
             }
         });
-
+        billing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(PatientHome.this,PrescriptionActivity.class);
+                startActivity(it);
+            }
+        });
+        findDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(PatientHome.this, find_doctor.class);
+                startActivity(it);
+            }
+        });
+        report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(PatientHome.this,Report.class);
+                startActivity(it);
+            }
+        });
     }
 }

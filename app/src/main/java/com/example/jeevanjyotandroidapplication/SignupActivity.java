@@ -88,9 +88,6 @@ public class SignupActivity extends AppCompatActivity {
         // Initialize UI components
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
-        fb = findViewById(R.id.fab_facebook);
-        google = findViewById(R.id.fab_google);
-        twit = findViewById(R.id.fab_twitter);
 
         // Set tab text colors
         tabLayout.setTabTextColors(
@@ -107,16 +104,6 @@ public class SignupActivity extends AppCompatActivity {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         // Floating Action Button Animations
-        FloatingActionButton[] buttons = {fb, google, twit};
-        for (FloatingActionButton button : buttons) {
-            button.setTranslationY(ANIMATION_START_TRANSLATION);
-            button.setAlpha(0f);
-            button.animate()
-                    .translationY(0)
-                    .alpha(1)
-                    .setDuration(ANIMATION_DURATION)
-                    .setStartDelay(400)
-                    .start();
-        }
+
     }
 }

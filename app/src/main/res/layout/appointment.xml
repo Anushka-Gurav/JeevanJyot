@@ -190,7 +190,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:text="Add Prescription"
-            android:backgroundTint="#EA6262"
+            android:backgroundTint="@color/lavendar"
             />
 
 
@@ -201,7 +201,7 @@
             android:text="Book Appointment"
             android:layout_marginTop="16dp"
             android:id="@+id/book"
-            android:backgroundTint="#EA6262"
+            android:backgroundTint="@color/lavendar"
             android:textColor="@color/white"/>
 
         <!-- Reviews and Ratings -->
@@ -216,7 +216,7 @@
             android:layout_height="wrap_content"
             android:text="Emergency Contact"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#EA6262"
+            android:backgroundTint="@color/lavendar"
             android:textColor="@color/white"/>
 
     </LinearLayout>

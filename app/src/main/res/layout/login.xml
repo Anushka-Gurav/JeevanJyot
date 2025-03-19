@@ -79,54 +79,11 @@
 
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_google"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/google"
-            app:tint="@null"
-            android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_pager"
-            android:layout_marginLeft="20dp"
-            />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_facebook"
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/facebook"
-            android:elevation="35dp"
-            android:scaleType="fitXY"
-            app:tint="@null"
-            android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/fab_google"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_pager"
-            android:layout_marginLeft="80dp"
-            />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_twitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/twitter"
-            android:elevation="35dp"
-            android:backgroundTint="@color/white"
-            app:tint="@null"
-            app:maxImageSize="40dp"
-            app:layout_constraintHorizontal_bias="0"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/fab_google"
-            app:layout_constraintTop_toBottomOf="@+id/view_pager"
-            />
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <ImageView
         android:id="@+id/imageView3"

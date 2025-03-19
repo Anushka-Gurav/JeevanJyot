@@ -57,6 +57,13 @@ public class DoctorLoginFragmentTab extends Fragment {
             }
         });
 
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(getActivity(),ForgetDoctor.class);
+                startActivity(it);
+            }
+        });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +77,7 @@ public class DoctorLoginFragmentTab extends Fragment {
                         Toast.makeText(getActivity(), "Login Successful!", Toast.LENGTH_SHORT).show();
 
                         // Navigate to Home Activity
-                        Intent intent = new Intent(getActivity(), ChatBot.class);
+                        Intent intent = new Intent(getActivity(), DoctorHome.class);
                         startActivity(intent);
 
                     } else {

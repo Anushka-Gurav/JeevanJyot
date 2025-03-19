@@ -17,6 +17,7 @@ public class DoctorSignupFragmentTab extends Fragment {
     Button sign;
     float v=0;
     DatabaseHelper databaseHelper;
+    TextView login;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         ViewGroup root=(ViewGroup)inflater.inflate(R.layout.sign_upfragment2,container,false);
@@ -26,7 +27,7 @@ public class DoctorSignupFragmentTab extends Fragment {
         mobile=root.findViewById(R.id.Mobile);
         specialisation=root.findViewById(R.id.Specialisation);
         sign=root.findViewById(R.id.sign_up);
-
+        login=root.findViewById(R.id.login);
 
         email.setTranslationX(800);
         pass.setTranslationX(800);
@@ -34,7 +35,7 @@ public class DoctorSignupFragmentTab extends Fragment {
         mobile.setTranslationX(800);
         specialisation.setTranslationX(800);
         sign.setTranslationX(800);
-
+        login.setTranslationX(800);
 
         email.setAlpha(v);
         pass.setAlpha(v);
@@ -42,6 +43,7 @@ public class DoctorSignupFragmentTab extends Fragment {
         mobile.setAlpha(v);
         specialisation.setAlpha(v);
         sign.setAlpha(v);
+        login.setAlpha(v);
 
         databaseHelper = new DatabaseHelper(getContext());
         username.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
@@ -50,6 +52,15 @@ public class DoctorSignupFragmentTab extends Fragment {
         specialisation.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(900).start();
         pass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(900).start();
         sign.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(900).start();
+        login.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(900).start();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(getActivity(), LoginActivity.class);
+                startActivity(it);
+            }
+        });
         sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +70,7 @@ public class DoctorSignupFragmentTab extends Fragment {
                 String email1 = email.getText().toString();
                 String password=pass.getText().toString();
 
-                if (name.isEmpty() || specialization.isEmpty() || phone.isEmpty() || email1.isEmpty()) {
+                if (name.isEmpty() || specialization.isEmpty() || phone.isEmpty() || email1.isEmpty() || password.isEmpty()) {
                     Toast.makeText(getActivity(), "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
                     boolean insertSuccess = databaseHelper.addDoctor(name, specialization, phone, email1,password);

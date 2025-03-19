@@ -4,7 +4,9 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -39,6 +41,14 @@
         <activity android:name=".Appointment"/>
         <activity android:name=".Emergency"/>
         <activity android:name=".Setting"/>
+        <activity android:name=".ForgetDoctor"/>
+        <activity android:name=".ForgetPatient"/>
+        <activity android:name=".PatientFormActivity"/>
+        <activity android:name=".find_doctor"/>
+        <activity android:name=".Report"/>
+        <activity android:name=".PrescriptionActivity"/>
+        <activity android:name=".SettingClass"/>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY"/>

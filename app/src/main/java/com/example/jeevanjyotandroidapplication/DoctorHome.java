@@ -12,7 +12,7 @@ import com.example.jeevanjyotandroidapplication.databinding.ActivityDashboardBin
 public class DoctorHome extends DrawerBaseActivity {
 
     ActivityDashboardBinding activityDashboardBinding;
-    LinearLayout linearLayoutForProfile,myPatient,appoint;
+    LinearLayout linearLayoutForProfile,myPatient,appoint,chat;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main_for_doctor);
@@ -25,6 +25,7 @@ public class DoctorHome extends DrawerBaseActivity {
         linearLayoutForProfile=findViewById(R.id.profileId);
         myPatient=findViewById(R.id.myPatient);
         appoint=findViewById(R.id.appoint);
+        chat=findViewById(R.id.chat);
         linearLayoutForProfile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -43,6 +44,13 @@ public class DoctorHome extends DrawerBaseActivity {
             @Override
             public void onClick(View view) {
                 Intent it=new Intent(DoctorHome.this, Appointment.class);
+                startActivity(it);
+            }
+        });
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(DoctorHome.this, ChatBot.class);
                 startActivity(it);
             }
         });

@@ -43,6 +43,10 @@ public class DrawerBaseForPatient extends AppCompatActivity implements Navigatio
         {
             openLogOut();
         }
+        else if(item.getItemId()==R.id.nav_settings)
+        {
+            openSetting();
+        }
 
         drawerLayout.closeDrawers(); // Close the navigation drawer after selection
         return true;
@@ -50,6 +54,11 @@ public class DrawerBaseForPatient extends AppCompatActivity implements Navigatio
 
     private void openChatbot() {
         Intent intent = new Intent(this, ChatBot.class);
+        startActivity(intent);
+    }
+    private void openSetting()
+    {
+        Intent intent=new Intent(this, SettingClass.class);
         startActivity(intent);
     }
 
