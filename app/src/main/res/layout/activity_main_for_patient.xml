@@ -75,7 +75,7 @@
                 android:src="@drawable/baseline_find_in_page_24" />
             <TextView
                 style="@style/GridTextStyle"
-                android:text="Find Doctor"
+                android:text="Find Hospitals"
                 android:textColor="@color/lavendar"/>
         </LinearLayout>
 
@@ -89,7 +89,7 @@
                 android:src="@drawable/baseline_medical_services_24" />
             <TextView
                 style="@style/GridTextStyle"
-                android:text="Find Medicine"
+                android:text="Check Medicine"
                 android:textColor="@color/lavendar"/>
         </LinearLayout>
 

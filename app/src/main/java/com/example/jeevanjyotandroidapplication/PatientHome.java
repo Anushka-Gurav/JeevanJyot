@@ -40,7 +40,7 @@ public class PatientHome extends DrawerBaseForPatient{
         findDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it=new Intent(PatientHome.this, find_doctor.class);
+                Intent it=new Intent(PatientHome.this, GoogleMapsActivity.class);
                 startActivity(it);
             }
         });
@@ -48,6 +48,27 @@ public class PatientHome extends DrawerBaseForPatient{
             @Override
             public void onClick(View view) {
                 Intent it=new Intent(PatientHome.this,Report.class);
+                startActivity(it);
+            }
+        });
+        findMedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(PatientHome.this, Medicine_Scanner.class);
+                startActivity(it);
+            }
+        });
+        remainder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(PatientHome.this, Medicine_Remainder.class);
+                startActivity(it);
+            }
+        });
+        findMedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(PatientHome.this, Medicine_Scanner.class);
                 startActivity(it);
             }
         });

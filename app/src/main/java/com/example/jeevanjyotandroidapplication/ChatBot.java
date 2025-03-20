@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.example.jeevanjyotandroidapplication.databinding.ActivityDashboardBinding;
+import com.example.jeevanjyotandroidapplication.BuildConfig;
 import com.google.ai.client.generativeai.GenerativeModel;
 import com.google.ai.client.generativeai.java.GenerativeModelFutures;
 import com.google.ai.client.generativeai.type.Content;
@@ -54,7 +55,7 @@ public class ChatBot extends DrawerBaseForPatient {
 
         // Initialize Gemini API model
         GenerativeModel gm = new GenerativeModel("models/gemini-1.5-pro",
-                "AIzaSyC68fD23A05xMuFamdVA78QKgcBje9diFk"); // Replace with your API key
+                BuildConfig.API_KEY); // Replace with your API key
         model = GenerativeModelFutures.from(gm);
 
         sendButton.setOnClickListener(view -> {

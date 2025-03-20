@@ -30,10 +30,10 @@ public class PatientListActivity extends DrawerBaseActivity {
 
         // Dummy patient data
         patientList = new ArrayList<>();
-        patientList.add(new Patient("Anushka Gurav", "8010939301"));
-        patientList.add(new Patient("Tasnim Shaikh", "8010939301"));
-        patientList.add(new Patient("Aishwarya Anekar", "8010939301"));
-        patientList.add(new Patient("Shamal Jadhav", "8010939301"));
+        patientList.add(new Patient("Anushka Gurav", "0123456789"));
+        patientList.add(new Patient("Tasnim Shaikh", "0123456789"));
+        patientList.add(new Patient("Aishwarya Anekar", "0123456789"));
+        patientList.add(new Patient("Shamal Jadhav", "0123456789"));
 
         patientAdapter = new PatientAdapter(this, patientList);
         recyclerView.setAdapter(patientAdapter);
